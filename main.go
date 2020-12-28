@@ -13,8 +13,6 @@ func main() {
 
 		d, err ioutil.ReadAll(r.Body)
 		if err != nil {
-			// rw.WriteHeader(http.StatusBadRequest)
-			// rw.Write([]byte("Oops"))
 			http.Error(rw, "Oops", https.StatusBadRequest)
 			return
 		}
